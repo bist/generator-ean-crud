@@ -24,7 +24,7 @@ describe('ean-crud generator', function () {
             // add files you expect to exist here.
             '.jshintrc',
             '.editorconfig',
-            'Gruntfile.js',
+            'Gruntfile.coffee',
             'app.coffee',
             'src/client/modules/config',
             'src/client/public',
