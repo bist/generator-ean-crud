@@ -47,7 +47,7 @@ app.configure () ->
    app.use handleUncaughtExceptions
    app.use express.bodyParser()
    app.use express.cookieParser()
-   app.use express.session({secret: "wBxXBlJZt2Zbi0vztcG9EKBzCe2flRPK", key: 'sid', cookie: {maxAge: settings.misc.sessionExpiration, httpOnly: true, secure: settings.misc.secureCookies}})
+   app.use express.session({secret: "", key: 'sid', cookie: {maxAge: settings.misc.sessionExpiration, httpOnly: true, secure: settings.misc.secureCookies}})
    app.use expressWinston.logger({ transports: [ new winston.transports.File(json: true, filename: "#{settings.app.logDir}/access.log") ] })
    app.use app.router
    app.use handleServerExceptions
@@ -66,7 +66,7 @@ clientRoutes.initRoutes(app, publicDir, templateDir, clientDir)
 serverRoutes.initRoutes(app, settings)
 
 # ------- run web server -------
-winston.info "Starting Member Information System:"
+winston.info "Starting <%= _.slugify(appName) %>:"  
 server = http.createServer(app)
 server.listen settings.app.port, () ->
    winston.info "Listening on port %s...", settings.app.port;

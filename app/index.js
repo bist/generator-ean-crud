@@ -48,7 +48,7 @@ EanCrudGenerator.prototype.app = function app() {
 
   this.copy('_package.json', 'package.json');
   this.copy('Gruntfile.coffee', 'Gruntfile.coffee');
-  this.copy('app.coffee','app.coffee');
+  this.template('app.coffee','app.coffee');
   this.copy('mocha.opts','test/mocha.opts');
   this.copy('karma.conf.js','test/client/karma.conf.js');
   this.copy('server/routes/client.coffee','src/server/routes/client.coffee');
