@@ -23,11 +23,20 @@ describe('ean-crud generator', function () {
         var expected = [
             // add files you expect to exist here.
             '.jshintrc',
-            '.editorconfig'
+            '.editorconfig',
+            'Gruntfile.js',
+            'app.coffee',
+            'src/client/modules/config',
+            'src/client/public',
+            'src/server/api',
+            'src/server/routes',
+            'test/mocha.opts',
+            'test/client/karma.conf.js',
+            'src/server/routes/client.coffee'
         ];
 
         helpers.mockPrompt(this.app, {
-            'someOption': true
+            'appName': "appName"
         });
         this.app.options['skip-install'] = true;
         this.app.run({}, function () {

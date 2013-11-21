@@ -22,26 +22,37 @@ EanCrudGenerator.prototype.askFor = function askFor() {
   // have Yeoman greet the user.
   console.log(this.yeoman);
 
-  var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
+  var prompts = [{ 
+    name: 'appName',
+    message: 'What do you want to call this app?'
   }];
 
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+    this.appName = props.appName;
 
     cb();
   }.bind(this));
 };
 
 EanCrudGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
+  this.mkdir('src/client/modules');
+  this.mkdir('src/client/modules/config');
+  this.mkdir('src/client/public');
+  this.mkdir('src/server/api');
+  this.mkdir('src/server/routes');
+
+  this.mkdir('test/server/integration');
+  this.mkdir('test/server/unit');
+  this.mkdir('test/client/integration');
+  this.mkdir('test/client/unit');
 
   this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+  this.copy('Gruntfile.coffee', 'Gruntfile.coffee');
+  this.copy('app.coffee','app.coffee');
+  this.copy('mocha.opts','test/mocha.opts');
+  this.copy('karma.conf.js','test/client/karma.conf.js');
+  this.copy('server/routes/client.coffee','src/server/routes/client.coffee');
+
 };
 
 EanCrudGenerator.prototype.projectfiles = function projectfiles() {
