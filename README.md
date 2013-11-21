@@ -1,6 +1,4 @@
-# generator-ean-crud [![Build Status](https://secure.travis-ci.org/abdulkadiryaman/generator-ean-crud.png?branch=master)](https://travis-ci.org/abdulkadiryaman/generator-ean-crud)
-
-# [![Code Climate](https://codeclimate.com/github/abdulkadiryaman/generator-ean-crud.png)](https://codeclimate.com/github/abdulkadiryaman/generator-ean-crud)
+# generator-ean-crud [![Build Status](https://secure.travis-ci.org/abdulkadiryaman/generator-ean-crud.png?branch=master)](https://travis-ci.org/abdulkadiryaman/generator-ean-crud)  [![Code Climate](https://codeclimate.com/github/abdulkadiryaman/generator-ean-crud.png)](https://codeclimate.com/github/abdulkadiryaman/generator-ean-crud)
 
 A generator for [Yeoman](http://yeoman.io).
 
