@@ -17,7 +17,7 @@ test-coveralls:
 	@NODE_COV=1 $(MAKE) test REPORTER=mocha-coveralls-reporter
 
 lib-cov:
-    @rm -rf lib-cov
-    @jscoverage lib lib-cov
+	@rm -rf lib-cov
+	@jscoverage lib lib-cov
 
 .PHONY: test lib-cov test-cov travis-test
