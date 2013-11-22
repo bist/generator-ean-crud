@@ -1,6 +1,9 @@
 language: node_js
 node_js: 
   - '0.10'
+
+script: make test-coveralls
+
 before_install:
   - currentfolder=${PWD##*/}
   - if [ "$currentfolder" != 'generator-ean-crud' ]; then cd .. && eval "mv $currentfolder generator-ean-crud" && cd generator-ean-crud; fi
