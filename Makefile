@@ -7,7 +7,7 @@ core_test:
 	@NODE_ENV=test ./node_modules/.bin/mocha -b --require blanket --reporter $(REPORTER)
 
 lint:
-	./node_modules/.bin/jshint ./lib ./test ./index.js
+	./node_modules/.bin/jshint ./app ./test
 
 test-cov:
 	$(MAKE) test REPORTER=spec

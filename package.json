@@ -18,15 +18,20 @@
     "url": "git://github.com/abdulkadiryaman/generator-ean-crud.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "make test",
+    "blanket": { 
+      "data-cover-never": "node_modules"
+    }
   },
   "dependencies": {
     "yeoman-generator": "~0.13.0"
   },
   "devDependencies": {
+    "blanket": "~1.1.5",
     "mocha": "~1.9.0",
     "coveralls": "~2.3.0",
-    "mocha-coveralls-reporter": "0.0.5"
+    "mocha-coveralls-reporter": "0.0.5",
+    "jshint": "2.3.0"
 
   },
   "peerDependencies": {
