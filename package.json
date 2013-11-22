@@ -1,16 +1,17 @@
 {
   "name": "generator-ean-crud",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "version": "0.0.1",
+  "description": "A crud application generator for ExpressJS, AngularJS, NodeJS, Coffee stack",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "generator-ean-crud"
   ],
   "homepage": "https://github.com/user/generator-ean-crud",
   "bugs": "https://github.com/user/generator-ean-crud/issues",
   "author": {
-    "name": "user",
-    "email": "user@email.com",
-    "url": "https://github.com/user"
+    "name": "abdulkadiryaman",
+    "email": "abdulkadiryaman@gmail.com",
+    "url": "https://github.com/abdulkadiryaman"
   },
   "main": "app/index.js",
   "repository": {
@@ -32,6 +33,7 @@
   "devDependencies": {
     "blanket": "~1.1.5",
     "mocha": "~1.9.0",
+    "mocha-lcov-reporter": "0.0.1",
     "coveralls": "~2.3.0",
     "mocha-coveralls-reporter": "0.0.5",
     "jshint": "2.3.0"
