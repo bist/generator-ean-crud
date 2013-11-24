@@ -19,7 +19,7 @@
     "url": "git://github.com/abdulkadiryaman/generator-ean-crud.git"
   },
   "scripts": {
-    "test": "make test",
+    "test": "make test test-coveralls",
     "blanket": { 
       "data-cover-never": "node_modules",
       "data-cover-flags": {
@@ -31,11 +31,15 @@
     "yeoman-generator": "~0.13.0"
   },
   "devDependencies": {
+    "lcov-parse": "0.0.4",
     "blanket": "~1.1.5",
     "mocha": "~1.9.0",
     "mocha-lcov-reporter": "0.0.1",
+    "sinon-restore": "1.0.0",
+    "should": "1.1.0",
     "coveralls": "~2.3.0",
     "mocha-coveralls-reporter": "0.0.5",
+    "visionmedia-jscoverage": "~1.0.0",
     "jshint": "2.3.0"
 
   },

@@ -1,21 +1,28 @@
 REPORTER = spec
-test: 
+
+.PHONY: test
+test:
 	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
 	@$(MAKE) core_test
 
 core_test:
-	@NODE_ENV=test ./node_modules/.bin/mocha -b --require blanket --reporter $(REPORTER)
-
+	./node_modules/.bin/mocha -R mocha-lcov-reporter
+	
+.PHONY: lint
 lint:
-	./node_modules/.bin/jshint ./app ./test
+	./node_modules/.bin/jshint ./app ./test 
 
-test-cov:
-	$(MAKE) test REPORTER=spec
-	$(MAKE) core_test REPORTER=html-cov > coverage.html
-
+.PHONY: coveralls
 test-coveralls:
-	$(MAKE) test REPORTER=spec
-	$(MAKE) core_test REPORTER=mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js --verbose
-	rm -rf lib-cov
+	rm -rf coverage
+	rm -rf app-cov
 
-.PHONY: test
+	mkdir coverage
+	mkdir app-cov
+
+	jscoverage app/index.js app-cov/index.js
+	mv app app-orig
+	mv app-cov app
+	./node_modules/.bin/mocha -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
+	rm -rf app
+	mv app-orig app
