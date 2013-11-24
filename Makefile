@@ -20,7 +20,7 @@ test-coveralls:
 	mkdir coverage
 	mkdir app-cov
 
-	jscoverage app/index.js app-cov/index.js
+	./node_modules/.bin/jscoverage app/index.js app-cov/index.js
 	mv app app-orig
 	mv app-cov app
 	./node_modules/.bin/mocha -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js

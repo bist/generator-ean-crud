@@ -39,7 +39,7 @@
     "should": "1.1.0",
     "coveralls": "~2.3.0",
     "mocha-coveralls-reporter": "0.0.5",
-    "visionmedia-jscoverage": "~1.0.0",
+    "jscoverage": "~0.3.8",
     "jshint": "2.3.0"
 
   },
