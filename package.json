@@ -20,15 +20,10 @@
   },
   "scripts": {
     "test": "make test test-coveralls",
-    "blanket": { 
-      "data-cover-never": "node_modules",
-      "data-cover-flags": {
-        "engineOnly": true
-      }
-    }
+    "coverage": "make test-coveralls"
   },
   "dependencies": {
-    "yeoman-generator": "~0.13.0"
+    "yeoman-generator": "~0.13.0" 
   },
   "devDependencies": {
     "lcov-parse": "0.0.4",

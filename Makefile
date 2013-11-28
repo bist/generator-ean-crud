@@ -6,7 +6,7 @@ test:
 	@$(MAKE) core_test
 
 core_test:
-	./node_modules/.bin/mocha -R mocha-lcov-reporter
+	./node_modules/.bin/mocha
 	
 .PHONY: lint
 lint:

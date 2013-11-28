@@ -1,0 +1,15 @@
+default:
+   app:
+      port: 3000
+      host: '0.0.0.0'
+      logDir: 'logs'
+   endpoints:
+      myService: http://localhost:3001/myService
+       
+   misc:
+      oneDay: 86400000 # 1 day in milliseconds
+      oneHour: 3600000 # 1 hour in milliseconds
+      oneMinute: 60000 # 1 minute in milliseconds
+      secureCookies: false
+      sessionExpiration: 1200000
+      clientDirectory: target/src/client
